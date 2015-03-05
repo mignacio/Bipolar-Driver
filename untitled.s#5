@@ -9398,12 +9398,11 @@ Standard 7805 5V regulator. IGO (Input Ground Output). Spark Fun Electronics SKU
 <part name="STANDOFF4" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
 <part name="IC3" library="SparkFun-PowerIC" deviceset="V_REG_78XX" device="SINK"/>
 <part name="P+7" library="supply1" deviceset="+5V" device=""/>
-<part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
 <part name="X2" library="con-molex" deviceset="KK-156-2" device=""/>
 <part name="P+8" library="supply1" deviceset="+24V" device=""/>
 <part name="C5" library="capacitor-wima" deviceset="C" device="2,5-3" value="3.3nF"/>
-<part name="C6" library="capacitor-wima" deviceset="C" device="2,5-3" value="100nF"/>
+<part name="C6" library="capacitor-wima" deviceset="C" device="2,5-3" value="470uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -9461,8 +9460,7 @@ Standard 7805 5V regulator. IGO (Input Ground Output). Spark Fun Electronics SKU
 <instance part="STANDOFF4" gate="G$1" x="154.94" y="119.38"/>
 <instance part="IC3" gate="G$1" x="-15.24" y="104.14"/>
 <instance part="P+7" gate="1" x="-2.54" y="109.22"/>
-<instance part="GND15" gate="1" x="-15.24" y="93.98"/>
-<instance part="GND16" gate="1" x="-15.24" y="93.98"/>
+<instance part="GND16" gate="1" x="-15.24" y="91.44"/>
 <instance part="X2" gate="-1" x="-30.48" y="109.22" rot="R90"/>
 <instance part="X2" gate="-2" x="-35.56" y="96.52" rot="R180"/>
 <instance part="P+8" gate="1" x="-38.1" y="106.68"/>
@@ -9599,18 +9597,17 @@ Standard 7805 5V regulator. IGO (Input Ground Output). Spark Fun Electronics SKU
 <junction x="-20.32" y="76.2"/>
 </segment>
 <segment>
+<pinref part="GND16" gate="1" pin="GND"/>
+<pinref part="GND16" gate="1" pin="GND"/>
 <pinref part="IC3" gate="G$1" pin="GND"/>
-<pinref part="GND15" gate="1" pin="GND"/>
-<pinref part="GND16" gate="1" pin="GND"/>
-<junction x="-15.24" y="96.52"/>
-<pinref part="GND16" gate="1" pin="GND"/>
+<wire x1="-15.24" y1="96.52" x2="-15.24" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="X2" gate="-2" pin="S"/>
 <wire x1="-33.02" y1="96.52" x2="-22.86" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="2"/>
 <wire x1="-22.86" y1="96.52" x2="-15.24" y2="96.52" width="0.1524" layer="91"/>
-<junction x="-22.86" y="96.52"/>
 <pinref part="C6" gate="G$1" pin="1"/>
-<wire x1="-15.24" y1="96.52" x2="-2.54" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="96.52" x2="-15.24" y2="96.52" width="0.1524" layer="91"/>
+<junction x="-15.24" y="96.52"/>
 </segment>
 </net>
 <net name="+24V" class="0">
